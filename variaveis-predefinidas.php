@@ -117,4 +117,27 @@ br();
 
 // SESSIONS
 
+/**
+ * Usando a SESSION, você pode guardar as informações das variáveis, para
+ * ser usado em várias páginas.
+ * Informações não são guardas no computador do usuário, embora exista os
+ * cookies, sendo a utilização desses não recomendado.
+ *  
+ *  */
+
+// A sessão começa ao chamar a função session_start();
+session_start();
+$_SESSION['color'] = 'red';
+$_SESSION['name'] = 'John';
+
+/**
+ *  Para remover essas variáveis de sessões deve-se chamar a função
+ * 
+ * session_unset();
+ * 
+ * E para destruir a sessão:
+ * 
+ * session_destroy();
+ * 
+ */
 ?>
