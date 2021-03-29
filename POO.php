@@ -68,3 +68,86 @@ class Person3
 }
 
 $p1 = new Person3('Tiago', 21);
+
+// PHP Herança de classes
+class Animal
+{
+    public $name;
+    public function hi()
+    {
+        echo "Eae do animal";
+    }
+}
+
+class Dog2 extends Animal
+{ // extends -> Usado para herdar uma classe
+
+}
+
+$d3 = new Dog2();
+$d3->hi();
+
+
+// PHP Interfaces
+/**
+ * Uma interface específica uma lista de métodos que um classe deve
+ * implementar. Basicamente você cria uma interface com métodos já
+ * elaborados, e basta implementar essa interface na sua classe e dar
+ * um real valor a essa interface.
+ * 
+ */
+
+interface AnimalInterface
+{
+    public function makeSound();
+}
+
+class Dogao implements AnimalInterface
+{
+    public function makeSound()
+    {
+        echo "Woof! <br />";
+    }
+}
+
+class Cat implements AnimalInterface
+{
+    public function makeSound()
+    {
+        echo "Meow! <br />";
+    }
+}
+
+// Uma classe pode ter várias interfaces, basta separalas por virgulas.
+
+// PHP Classes Abstratas
+// Podem ter heranças, mas não podem ser instanciadas. Tem a habilidade
+// de ter métodos e parâmetros estáticos que só podem ser herdados, mas
+// nunca instanciados, dando uma proteção a mais no código.
+// A classe que herdar um método abstrato, deve implementar todos os 
+// métodos desta classe.
+
+abstract class Fruit
+{
+    private $color;
+
+    abstract public function eat();
+
+    public function setColor($c)
+    {
+        $this->color = $c;
+    }
+}
+
+class Apple extends Fruit
+{
+    public function eat()
+    {
+        echo "Omnomnom";
+    }
+}
+
+$obj = new Apple();
+$obj->eat();
+
+// STATIC e FINAL
