@@ -41,11 +41,16 @@ function br()
  *  $GLOBALS -> 
  *  
  *  $_REQUEST -> 
+ *  
+ * ====================================================
+ *  $_POST -> Usado para enviar dados por dentro da página, mais seguro
+ * Também usado para acessar os dados dinâmicos que estão acoplcados ness
+ * array.
+ * ===================================================
+ *  $_GET -> Usado para acessar os dados que estão acoplados nessa variável
+ * Super Global. 
  * 
- *  $_POST -> 
- * 
- *  $_GET -> 
- * 
+ * =================================================
  *  $_FILES -> 
  * 
  *  $_ENV -> 
@@ -89,3 +94,27 @@ br();
 // =========================================
 //           PHP FORMS
 // =========================================
+// O propósito das variáveis superglobais $_GET e $_POST é coletar
+// os dados que são inputados num formulário.
+?>
+<form action="first.php" method="post">
+    <p>Name: <input type="text" name="name" /></p>
+    <p>Age: <input type="text" name="age" /></p>
+    <p><input type="submit" name="submit" value="submit" /></p>
+</form>
+<?php
+// Em php FORMS os métodos são arrays de CHAVE e VAlOR, em que a chave
+// é o atributo name do input e o valor é o valor digitado pelo usuário.
+?>
+<form action="actionGet.php" method="get">
+    Name: <input type="text" name="name" /><br />
+    Age: <input type="text" name="age" /><br />
+    <input type="submit" name="submit" value="submit" />
+</form>
+<?php
+// Com o método GET os dados são enviados pela URL, não sendo útil para
+// enviar dados sensíveis.
+
+// SESSIONS
+
+?>
