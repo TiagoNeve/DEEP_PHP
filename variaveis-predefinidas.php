@@ -140,4 +140,22 @@ $_SESSION['name'] = 'John';
  * session_destroy();
  * 
  */
+
+/**
+ * COOKIES: São freenquentementes utilizados para indentificar usuários.
+ * Um cookie é um pequeno arquivo que o servidor incorpora no computador
+ * do usuário, como um método para indentificar esse computador como se
+ * fosse de um determinado usuário de seu banco de dados.
+ * 
+ * Quando o Computador acessa um endpoint é enviado também o Cookie pertecente aquele host.
+ * Desta forma o PHP pode receber esse cookie e trata-lo. 
+ * 
+ * Para criar um cookie utiliza-se a função setcookie();
+ * time() + 86400 * 30 -> Seta o intervalo do cookie por 30 dias.
+ */
+
+setcookie('teste', 'teste001', time() + 86400 * 30, '/', 'localhost', true, true); // Criando um cookie ao entrar nessa sessão.
+if (isset($_COOKIE['teste'])) {
+    echo "O valor é: " . $_COOKIE['teste'];
+}
 ?>
