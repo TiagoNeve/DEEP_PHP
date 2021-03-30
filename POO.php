@@ -168,3 +168,28 @@ echo myClass::$myStaticProperty; // Scope resolution operator
 
 
 myClass::myMethod();
+
+// Palavra chave FINAL
+/**
+ *  Essa palavra chave define que um método ou atributo não pode ser
+ * sobrescrevido em uma herança, limitando aquele método como a configuração
+ * final.
+ */
+
+class myClass00
+{
+    final function myFuction()
+    {
+        echo 'Parent';
+    }
+}
+
+class myClass002 extends myClass00
+{
+    // function myFuction() // O inteligin já mandou um erro aq.
+    // {
+    // }
+}
+
+// Se quiser que sua classe não tenha heranças, basta atribuir final na
+// sua declaração.
