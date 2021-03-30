@@ -151,3 +151,20 @@ $obj = new Apple();
 $obj->eat();
 
 // STATIC e FINAL
+// Os métodos e as propriedades podem ter atributo static.
+// Isso as torna capazes de serem chamadas sem precisar ter uma instância.
+
+class myClass
+{
+    static $myStaticProperty = 42;
+
+    static function myMethod()
+    {
+        echo self::$myStaticProperty;
+    }
+}
+
+echo myClass::$myStaticProperty; // Scope resolution operator
+
+
+myClass::myMethod();
