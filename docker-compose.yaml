@@ -7,4 +7,14 @@ services:
     - 4040:80
     volumes: 
       - "./php:/var/www/html"
+      
+  bd_web:
+    image: mysql
+    ports:
+      - 3036:3036
+    volumes:
+      - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
     
