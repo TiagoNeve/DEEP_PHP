@@ -64,6 +64,16 @@
  * Strings podem ser concatenadas utilizando o . (ponto)
  * É possível modificar um valor em string utilizando o modificador (string) ou
  * a função strval() 
+ */
+/**
+ *  Tipo: Array
+ * Para criar um array pode utilizar a função array() ou colocar o array entre
+ * [ ] colchetes, dessa forma pode atribuir arrays usando a notação 
+ * chave => valor
+ * Para retirar valores de um array utiliza a função unset()
+ * Para reindexação de um array utilize a função array_values().
+ * Para percorrer um array utilize a função foreach().
+ * 
  * 
  * 
  */
