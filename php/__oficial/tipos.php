@@ -24,5 +24,13 @@
 /**
  * Tipo: Números de pontos flutuantes
  * 
+ * Nunca confie em número de pontos flutuantes, pois os mesmo não tem precisões
+ * bem definidas.
  * 
+ * Nas conversões de números para float, o número primeiro é convertido para 
+ * inteiro e depois é convertido para float, por tanto os valores das conversões
+ * podem não ser precisas (Nunca confie em números de pontos flutuantes PHP)
+ * 
+ * Para verificar se uma variável é número ou não, deve-se utilizar a função
+ * is_nan();
  */
