@@ -34,3 +34,36 @@
  * Para verificar se uma variável é número ou não, deve-se utilizar a função
  * is_nan();
  */
+/**
+ * Tipo: String
+ * 
+ * São representadas em ASC por padrão, e podem ser representadas por:
+ * 
+ * Aspas simples: Recomendado para quando for querer mostrar exatamente o 
+ * que está escrito, pois não reconhece caracteres especiais.
+ * 
+ * Aspas duplas: Reconhece os caracteres de escapes, mais recomendado para o 
+ * dia a dia. Aceita algumas expressões regulares
+ * 
+ * Heredoc: Cria uma espécie de string de múltiplas linhas, em que se define
+ * um <<<EOT aqui vem o conteúdo. EOT; Encerrando a string multínea. É possível
+ * inserir variáveis no heredoc e também ele serve como argumentos de funções.
+ * 
+ * Nowdoc: Tem o mesmo propósito do Heredoc, porém ele trabalha como aspas 
+ * simples, desta forma todos os caracteres especiais não serão renderizados
+ * e a construção é igual ao do Heredoc, contudo o identificador deve estar
+ * entre aspas simples <<<'EOT'.
+ * 
+ * Para declarar variáveis dentro de strings o recomendado é delimitar o nome
+ * da variável entre chaves ${  }, desta forma o PHP não se engana e procura
+ * a variável exato declarada.
+ * 
+ * A partir do PHP 7.1.0 é possível pegar caracteres através de index negativo
+ * dessa forma pode buscar últimos valores de um array.
+ * 
+ * Strings podem ser concatenadas utilizando o . (ponto)
+ * É possível modificar um valor em string utilizando o modificador (string) ou
+ * a função strval() 
+ * 
+ * 
+ */
