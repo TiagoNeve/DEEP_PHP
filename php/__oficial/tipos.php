@@ -84,5 +84,11 @@
 /**
  * Tipo: Iterables
  * 
+ * Utilizados para gerar uma interação com o foreach
+ */
+/**
+ * Tipo: Objetos
  * 
+ * São instâncias de classes. Para modificar qualquer valor em objeto
+ * basta adicionar (object).
  */
