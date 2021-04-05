@@ -74,6 +74,15 @@
  * Para reindexação de um array utilize a função array_values().
  * Para percorrer um array utilize a função foreach().
  * 
+ * $cores = array ('vermelho', 'azul', 'verde', 'amarelo');
+ * 
+ * foreach($cores as $cor) {
+ *      echo "Você gosta de ${cor}? \n";
+ * }
+ * 
+ */
+/**
+ * Tipo: Iterables
  * 
  * 
  */
